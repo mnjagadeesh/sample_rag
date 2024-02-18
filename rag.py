@@ -12,7 +12,7 @@ from langchain_community.vectorstores import Chroma
 
 # Load URL
 kb_loader = WebBaseLoader("https://mnjagadeesh.net")
-docs = loader.kb_load()
+docs = kb_loader.load()
 
 text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, 
                                                chunk_overlap=200)
